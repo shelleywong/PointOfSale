@@ -17,7 +17,7 @@ function addItem()
     runningTotal += newItem;
     // create a variable called dollars
     var dollars;
-    // call asCurrency() by with the value of runningTotal and assign the return value to dollars
+    // call asCurrency() w/ the value of runningTotal; assign return value to dollars
     dollars = asCurrency(runningTotal);
     // update the innerHTML of the span with the id "subtotal" to be dollars
     document.getElementById("subtotal").innerHTML = dollars;
