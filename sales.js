@@ -28,6 +28,10 @@ function addItem()
   }
 }
 
+//get the cookie with the "preTax" subtotal, cast it to a number in currency format
+//create a variable for receipt tax (7.5% tax) from the receipt subtotal (cast as currency number)
+//create a variable for receipt total from the subtotal & tax (cast as currency number)
+//update the appropriate tags in receipt.html
 function calculateReceipt(){
   var receiptSubtotal = Number(getCookie("preTax"));
   receiptSubtotal = Number(receiptSubtotal.toFixed(2));
