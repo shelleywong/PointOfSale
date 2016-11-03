@@ -34,14 +34,11 @@ function addItem()
 //update the appropriate tags in receipt.html
 function calculateReceipt(){
   var receiptSubtotal = Number(getCookie("preTax"));
-  receiptSubtotal = Number(receiptSubtotal.toFixed(2));
   var receiptTax = receiptSubtotal*0.075;
-  receiptTax = Number(receiptTax.toFixed(2));
   var receiptTotal = receiptSubtotal + receiptTax;
-  receiptTotal = Number(receiptTotal.toFixed(2));
-  document.getElementById("sub").innerHTML = "$" + receiptSubtotal;
-  document.getElementById("tax").innerHTML = "$" + receiptTax;
-  document.getElementById("tot").innerHTML = "$" + receiptTotal;
+  document.getElementById("sub").innerHTML = asCurrency(receiptSubtotal);
+  document.getElementById("tax").innerHTML = asCurrency(receiptTax);
+  document.getElementById("tot").innerHTML = asCurrency(receiptTotal);
 }
 
 //takes a number and gives a string with the number displayed as USD currency
